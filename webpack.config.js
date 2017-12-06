@@ -2,7 +2,7 @@
 * @Author: mxm
 * @Date:   2017-12-06 21:18:51
 * @Last Modified by:   mxm
-* @Last Modified time: 2017-12-06 22:02:40
+* @Last Modified time: 2017-12-06 22:38:45
 */
  const path = require('path');
 
@@ -14,5 +14,8 @@
      output: {
          path: path.resolve(__dirname, 'dist'),
          filename: 'js/[name].js'
+     },
+     externals: {
+     	'jquery' : 'window.jQuery'
      }
  };
