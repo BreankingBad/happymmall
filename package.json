@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/BreankingBad/happymmall/issues"
   },
-  "homepage": "https://github.com/BreankingBad/happymmall#readme"
+  "homepage": "https://github.com/BreankingBad/happymmall#readme",
+  "devDependencies": {
+    "webpack": "^1.15.0"
+  }
 }
