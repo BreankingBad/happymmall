@@ -2,8 +2,10 @@
 * @Author: mxm
 * @Date:   2017-12-06 21:18:51
 * @Last Modified by:   mxm
-* @Last Modified time: 2017-12-06 22:38:45
+* @Last Modified time: 2017-12-08 23:10:58
 */
+
+ var webpack = require('webpack');
  const path = require('path');
 
  module.exports = {
@@ -17,5 +19,11 @@
      },
      externals: {
      	'jquery' : 'window.jQuery'
-     }
+     },
+     plugins: [
+        new  webpack.optimize.CommonsChunkPlugin({
+        	name: 'commons',
+        	filename: 'js/base.js'
+        })
+    ]
  };
