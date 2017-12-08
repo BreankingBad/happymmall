@@ -2,7 +2,7 @@
 * @Author: mxm
 * @Date:   2017-12-06 21:18:51
 * @Last Modified by:   mxm
-* @Last Modified time: 2017-12-08 23:10:58
+* @Last Modified time: 2017-12-08 23:23:09
 */
 
  var webpack = require('webpack');
@@ -10,6 +10,7 @@
 
  module.exports = {
      entry: {
+     	'common' : ['./src/page/common/index.js'],
      	'index' : ['./src/page/index/index.js'],
      	'login' : ['./src/page/login/index.js'],
  	 },
@@ -22,7 +23,7 @@
      },
      plugins: [
         new  webpack.optimize.CommonsChunkPlugin({
-        	name: 'commons',
+        	name: 'common',
         	filename: 'js/base.js'
         })
     ]
