@@ -2,12 +2,23 @@
 * @Author: mxm
 * @Date:   2017-12-06 21:18:51
 * @Last Modified by:   mxm
-* @Last Modified time: 2017-12-09 00:03:15
+* @Last Modified time: 2017-12-09 00:14:30
 */
 
  var webpack 			= require('webpack');
  var ExtractTextPlugin 	= require("extract-text-webpack-plugin");
  var HtmlWebpackPlugin 	= require('html-webpack-plugin');
+
+// 获取html-webpack-plugin参数的方法
+var getHtmlConfig 		= function(name){
+	return {
+        	template : './src/view/'+ name + '.html',
+        	filename : 'view/'+ name + '.html',
+        	inject   : true,
+        	hash 	 : true,
+        	chunks 	 : ['common', name]
+        };
+};
 
  const path = require('path');
 
@@ -41,12 +52,7 @@
         // 把css单独打包到文件里
         new ExtractTextPlugin("css/[name].css"),
         // html模版的处理
-        new HtmlWebpackPlugin({
-        	template : './src/view/index.html',
-        	filename : 'view/index.html',
-        	inject   : true,
-        	hash 	 : true,
-        	chunks 	 : ['common', 'index']
-        }),
+        new HtmlWebpackPlugin(getHtmlConfig('index')),
+        new HtmlWebpackPlugin(getHtmlConfig('login')),
     ]
  };
