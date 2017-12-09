@@ -2,8 +2,13 @@
 * @Author: mxm
 * @Date:   2017-12-09 21:47:18
 * @Last Modified by:   mxm
-* @Last Modified time: 2017-12-09 22:14:02
+* @Last Modified time: 2017-12-10 00:52:48
 */
+
+var conf = {
+	serverHost : ''
+};
+
 var utils = {
 	request : function(param) {
 		var _this = this;
@@ -33,6 +38,16 @@ var utils = {
 		});
 	},
 
+	// 获取服务器地址,可以在这做统一的处理
+	getServerUrl : function(path) {
+		return conf.serverHost + path;
+	},
+	// 获取URL参数
+	getUrlParam : function(name){
+		var reg = new RegExp('(^|&)' + name +'=([^&]*)(&|$)');
+		var result = window.location.search.substr(1).match(reg);
+		return result ? decodeURIComponent(result[2]) : null;
+	},
 	// 统一登录处理
 	doLogin : function(){
 		window.location.href = './login.html?redirect=' + encodeURIComponent(window.location.href);
