@@ -2,12 +2,15 @@
 * @Author: mxm
 * @Date:   2017-12-06 21:18:51
 * @Last Modified by:   mxm
-* @Last Modified time: 2017-12-09 17:54:36
+* @Last Modified time: 2017-12-09 18:29:29
 */
 
  var webpack 			= require('webpack');
  var ExtractTextPlugin 	= require("extract-text-webpack-plugin");
  var HtmlWebpackPlugin 	= require('html-webpack-plugin');
+
+var WEBPACK_ENV			= process.env.WEBPACK_ENV || 'dev';
+console.log(WEBPACK_ENV);
 
 // 获取html-webpack-plugin参数的方法
 var getHtmlConfig 		= function(name){
@@ -22,7 +25,8 @@ var getHtmlConfig 		= function(name){
 
  const path = require('path');
 
- module.exports = {
+// 配置
+ var config = {
      entry: {
      	'common' : ['./src/page/common/index.js'],
      	'index' : ['./src/page/index/index.js'],
@@ -55,3 +59,10 @@ var getHtmlConfig 		= function(name){
         new HtmlWebpackPlugin(getHtmlConfig('login')),
     ]
  };
+
+ module.exports = config;
+
+// 判断如果环境变量为dev,则加上该client方便开发
+if ('dev' === WEBPACK_ENV) {
+	config.entry.common.push('webpack-dev-server/client?http://localhost:8100/');
+}
