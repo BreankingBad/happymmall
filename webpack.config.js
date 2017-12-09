@@ -2,7 +2,7 @@
 * @Author: mxm
 * @Date:   2017-12-06 21:18:51
 * @Last Modified by:   mxm
-* @Last Modified time: 2017-12-09 18:29:29
+* @Last Modified time: 2017-12-09 22:26:58
 */
 
  var webpack 			= require('webpack');
@@ -45,6 +45,16 @@ var getHtmlConfig 		= function(name){
 				{test: /\.css$/,loader: 'style-loader!css-loader'},
 				{test:/\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/,loader:'url-loader?limit=1000&name=resource/[name].[ext]'}
 		     ]
+     },
+     resolve : {
+     	// 目录别名
+     	alias : {
+     		// utilDir 		: 	path.resolve(__dirname,'src/util'),
+     		utilDir 	: __dirname + '/src/util',
+     		pageDir 	: __dirname + '/src/page',
+     		serviceDir	: __dirname + '/src/service',
+     		imageDir	: __dirname + '/src/image'
+     	}
      },
      plugins: [
      	// 独立通用模块到js/base.js
