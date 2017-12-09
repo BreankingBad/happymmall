@@ -2,8 +2,10 @@
 * @Author: mxm
 * @Date:   2017-12-08 23:39:50
 * @Last Modified by:   mxm
-* @Last Modified time: 2017-12-09 13:11:47
+* @Last Modified time: 2017-12-09 18:04:30
 */
 body{
-	background: url('../../image/mi.jpg');
+	/*background: url('../../image/mi.jpg');*/
+	background: #eee;
+	color: red;
 }

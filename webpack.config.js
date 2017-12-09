@@ -2,7 +2,7 @@
 * @Author: mxm
 * @Date:   2017-12-06 21:18:51
 * @Last Modified by:   mxm
-* @Last Modified time: 2017-12-09 13:10:40
+* @Last Modified time: 2017-12-09 17:54:36
 */
 
  var webpack 			= require('webpack');
@@ -30,7 +30,8 @@ var getHtmlConfig 		= function(name){
  	 },
      output: {
          path: path.resolve(__dirname, 'dist'),
-         filename: 'js/[name].js'
+         filename: 'js/[name].js',
+         publicPath: '/dist'
      },
      externals: {
      	'jquery' : 'window.jQuery'
