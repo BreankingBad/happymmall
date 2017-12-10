@@ -2,8 +2,10 @@
 * @Author: mxm
 * @Date:   2017-12-09 21:47:18
 * @Last Modified by:   mxm
-* @Last Modified time: 2017-12-10 00:52:48
+* @Last Modified time: 2017-12-10 11:18:02
 */
+
+var Hogan = require('hogan');
 
 var conf = {
 	serverHost : ''
@@ -47,6 +49,12 @@ var utils = {
 		var reg = new RegExp('(^|&)' + name +'=([^&]*)(&|$)');
 		var result = window.location.search.substr(1).match(reg);
 		return result ? decodeURIComponent(result[2]) : null;
+	},
+	// 渲染html模版
+	renderHtml : function(htmlTemplate, data) {
+		var template = Hogan.compile(htmlTemplate);
+		result = template.render(data);
+		return result;
 	},
 	// 统一登录处理
 	doLogin : function(){
