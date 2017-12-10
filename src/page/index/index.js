@@ -2,13 +2,15 @@
 * @Author: mxm
 * @Date:   2017-12-05 23:20:59
 * @Last Modified by:   mxm
-* @Last Modified time: 2017-12-10 11:22:03
+* @Last Modified time: 2017-12-10 20:11:28
 */
 'use strict';
 
-require('./index.css');
+// require('./index.css');
+require('pageDir/common/nav_simple/index.css');
 
 var utils = require('utilDir/utils.js');
+
 
 // console.log('hello index');
 
@@ -26,8 +28,8 @@ var utils = require('utilDir/utils.js');
 
 // console.log(utils.getUrlParam('test'));
 
-var html = '<div>{{data}}</div>';
-var data = {
-	data : 'test'
-}
-console.log(utils.renderHtml(html,data));
+// var html = '<div>{{data}}</div>';
+// var data = {
+// 	data : 'test'
+// }
+// console.log(utils.renderHtml(html,data));
