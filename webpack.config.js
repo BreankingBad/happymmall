@@ -2,7 +2,7 @@
 * @Author: mxm
 * @Date:   2017-12-06 21:18:51
 * @Last Modified by:   mxm
-* @Last Modified time: 2017-12-09 22:26:58
+* @Last Modified time: 2017-12-10 19:47:18
 */
 
  var webpack 			= require('webpack');
@@ -50,6 +50,7 @@ var getHtmlConfig 		= function(name){
      	// 目录别名
      	alias : {
      		// utilDir 		: 	path.resolve(__dirname,'src/util'),
+     		node_modules_dir : __dirname + '/node_modules',
      		utilDir 	: __dirname + '/src/util',
      		pageDir 	: __dirname + '/src/page',
      		serviceDir	: __dirname + '/src/service',
