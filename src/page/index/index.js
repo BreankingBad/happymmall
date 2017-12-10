@@ -2,12 +2,12 @@
 * @Author: mxm
 * @Date:   2017-12-05 23:20:59
 * @Last Modified by:   mxm
-* @Last Modified time: 2017-12-10 20:11:28
+* @Last Modified time: 2017-12-10 23:09:14
 */
 'use strict';
 
 // require('./index.css');
-require('pageDir/common/nav_simple/index.css');
+require('pageDir/common/nav/index.css');
 
 var utils = require('utilDir/utils.js');
 
