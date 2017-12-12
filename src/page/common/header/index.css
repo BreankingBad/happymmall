@@ -1,0 +1,39 @@
+/*
+* @Author: mxm
+* @Date:   2017-12-11 23:33:27
+* @Last Modified by:   mxm
+* @Last Modified time: 2017-12-12 21:28:57
+*/
+.header .logo{
+	position: absolute;
+	font-size: 36px;
+	color: #c60023;
+	font-weight: bold;
+	text-decoration: none;
+	top: 34px;
+	left: 60px;
+}
+
+.header  .search-con{
+	padding: 40px 0 30px 250px;
+	
+}
+
+.header  .search-con .search-input{
+	width: 550px;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 10px;
+	font-size: 15px;
+	border: 2px solid #c60023;
+
+	/*去掉 输入框获得焦点时显示的边框*/
+	outline: none;
+}
+
+.header  .search-con .search-btn{
+	/* absolute可以去除与搜索框的空格距离*/
+	position: absolute;
+	height: 44px;
+	width: 88px;
+}
