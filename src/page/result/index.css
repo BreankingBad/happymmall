@@ -1,0 +1,26 @@
+/*
+* @Author: mxm
+* @Date:   2017-12-14 21:46:22
+* @Last Modified by:   mxm
+* @Last Modified time: 2017-12-15 23:53:54
+*/
+.page-wrap{
+	background: #fff;
+	margin-top: 20px;
+	text-align: center;
+	padding: 30px 0;
+}
+.result-con {
+	display: none;
+}
+.result-con .result-title{
+	color: #555;
+}
+.result-con .result-content{
+	margin-top: 20px;
+}
+.result-con .result-content .link{
+	margin: 0 5px;
+	padding: 5px 10px;
+	border: 1px solid #ccc;
+}
