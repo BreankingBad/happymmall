@@ -2,7 +2,7 @@
 * @Author: mxm
 * @Date:   2017-12-10 23:08:34
 * @Last Modified by:   mxm
-* @Last Modified time: 2017-12-10 23:36:35
+* @Last Modified time: 2017-12-17 10:50:34
 */
 .nav{
 	background: #eee;
@@ -13,7 +13,7 @@
 .nav .user{
 	float: left;
 }
-
+/*默认隐藏*/
 .nav .user.login{
 	display: none;
 }

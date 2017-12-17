@@ -2,7 +2,7 @@
 * @Author: mxm
 * @Date:   2017-12-09 21:47:18
 * @Last Modified by:   mxm
-* @Last Modified time: 2017-12-10 11:42:18
+* @Last Modified time: 2017-12-16 12:29:01
 */
 
 var Hogan = require('hogan');
@@ -82,7 +82,7 @@ var utils = {
 	},
 	// 统一登录处理
 	doLogin : function(){
-		window.location.href = './login.html?redirect=' + encodeURIComponent(window.location.href);
+		window.location.href = './user-login.html?redirect=' + encodeURIComponent(window.location.href);
 	},
 	// 返回主页
 	goHome : function() {
