@@ -2,7 +2,7 @@
 * @Author: mxm
 * @Date:   2017-12-16 12:32:16
 * @Last Modified by:   mxm
-* @Last Modified time: 2017-12-17 12:01:33
+* @Last Modified time: 2017-12-17 14:44:28
 */
 .page-wrap{
 	background: #e72955;
@@ -34,6 +34,7 @@
 	border: 1px solid red;
 	color: red;
 	background: #fde9e9;
+	display: none;
 }
 .user-con .user-box .error-icon{
 	position: absolute;
@@ -68,7 +69,7 @@
 	outline: none;
 }
 .user-con .btn-submit{
-	padding: 6px 0;
+	padding: 2px 0;
 	width: 100%;
 	font-size: 20px;
 	text-align: center;
