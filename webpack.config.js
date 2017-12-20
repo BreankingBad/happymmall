@@ -2,7 +2,7 @@
 * @Author: mxm
 * @Date:   2017-12-06 21:18:51
 * @Last Modified by:   mxm
-* @Last Modified time: 2017-12-17 22:27:19
+* @Last Modified time: 2017-12-20 21:17:57
 */
 
  var webpack 			= require('webpack');
@@ -32,7 +32,8 @@ var getHtmlConfig 		= function(name,title){
      	'common' : ['./src/page/common/index.js'],
      	'index' : ['./src/page/index/index.js'],
         'user-login' : ['./src/page/user-login/index.js'],
-     	'user-register' : ['./src/page/user-register/index.js'],
+        'user-register' : ['./src/page/user-register/index.js'],
+     	'user-pass-reset' : ['./src/page/user-pass-reset/index.js'],
      	'result' : ['./src/page/result/index.js']
  	 },
      output: {
@@ -73,6 +74,7 @@ var getHtmlConfig 		= function(name,title){
         new HtmlWebpackPlugin(getHtmlConfig('index','首页')),
         new HtmlWebpackPlugin(getHtmlConfig('user-login','登录')),
         new HtmlWebpackPlugin(getHtmlConfig('user-register','注册')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset','找回密码')),
         new HtmlWebpackPlugin(getHtmlConfig('result','操作结果页')),
     ]
  };

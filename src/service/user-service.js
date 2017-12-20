@@ -32,6 +32,35 @@ var _user = {
 			error	: reject
 		});
 	},
+	checkAnswer : function(userInfo, resolve, reject){
+		utils.request({
+			url  	: utils.getServerUrl('/user/forget_check_answer.do'),
+			data 	: userInfo,
+			method  : 'POST',
+			success : resolve,
+			error	: reject
+		});
+	},
+	resetPassword : function(userInfo, resolve, reject){
+		utils.request({
+			url  	: utils.getServerUrl('/user/forget_reset_password.do'),
+			data 	: userInfo,
+			method  : 'POST',
+			success : resolve,
+			error	: reject
+		});
+	},
+	getQuestion : function(username, resolve, reject){
+		utils.request({
+			url  	: utils.getServerUrl('/user/forget_get_question.do'),
+			data 	: {
+				username : username
+			},
+			method  : 'POST',
+			success : resolve,
+			error	: reject
+		});
+	},
 	register : function(userInfo, resolve, reject){
 		utils.request({
 			url  	: utils.getServerUrl('/user/register.do'),
