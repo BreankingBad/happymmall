@@ -2,7 +2,7 @@
 * @Author: mxm
 * @Date:   2017-12-10 11:45:59
 * @Last Modified by:   mxm
-* @Last Modified time: 2017-12-10 19:40:23
+* @Last Modified time: 2017-12-26 21:32:47
 */
 
 /*css reset,作用是把所有的dom元素的默认样式去掉，避免在不同浏览器解析不同导致错乱*/
@@ -39,6 +39,25 @@ input[type='checkbox']{
 	margin: 0 auto;
 
 	position: relative;
+	overflow: hidden;
+}
+
+.panel{
+	padding: 10px;
+	margin-bottom: 10px;
+	background: #fff;
+}
+
+.panel .panel-title {
+	padding: 10px;
+	font-size: 14px;
+	color: #666;
+	font-weight: bold;
+	border-bottom: 1px solid #eee;
+}
+
+.panel .panel-body{
+	padding: 10px;
 	overflow: hidden;
 }
 

@@ -2,7 +2,7 @@
 * @Author: mxm
 * @Date:   2017-12-10 23:08:45
 * @Last Modified by:   mxm
-* @Last Modified time: 2017-12-17 23:27:42
+* @Last Modified time: 2017-12-26 21:29:41
 */
 require('./index.css');
 
@@ -37,7 +37,7 @@ var nav = {
         _user.checkLogin(function (res) {
             $('.user.not-login').hide().siblings('.user.login').show().find('.username').text(res.username);
         },function (errMsg) {
-            utils.errorTips(errMsg)
+            console.log(errMsg);
         })
     },
     //加载购物车数量

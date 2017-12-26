@@ -78,7 +78,16 @@ var _user = {
             success : resolve,
             error : reject
         })
-    }
+    },	
+    // 获取用户信息
+    getUserInfo : function(resolve,reject){
+        utils.request({
+            url:utils.getServerUrl('/user/get_information.do'),
+            method:'POST',
+            success : resolve,
+            error : reject
+        })
+    },
 };
 
 module.exports = _user;

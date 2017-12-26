@@ -2,7 +2,7 @@
 * @Author: mxm
 * @Date:   2017-12-11 23:33:27
 * @Last Modified by:   mxm
-* @Last Modified time: 2017-12-12 21:28:57
+* @Last Modified time: 2017-12-26 21:23:25
 */
 .header .logo{
 	position: absolute;
@@ -36,4 +36,15 @@
 	position: absolute;
 	height: 44px;
 	width: 88px;
+}
+
+/*面包屑导航*/
+.crumb{
+	margin-bottom: 15px;
+	height: 50px;
+	line-height: 50px;
+	background: #eee;
+	color: #888;
+	font-size: 14px;
+	border-top: 2px solid #c60023;
 }
