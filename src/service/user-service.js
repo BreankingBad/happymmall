@@ -88,6 +88,15 @@ var _user = {
             error : reject
         })
     },
+    updateUserInfo : function(userInfo, resolve, reject){
+		utils.request({
+			url  	: utils.getServerUrl('/user/update_information.do'),
+			data 	: userInfo,
+			method  : 'POST',
+			success : resolve,
+			error	: reject
+		});
+	},
 };
 
 module.exports = _user;
