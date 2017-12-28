@@ -97,6 +97,15 @@ var _user = {
 			error	: reject
 		});
 	},
+	updatePassword : function(userInfo, resolve, reject){
+		utils.request({
+			url  	: utils.getServerUrl('/user/reset_password.do'),
+			data 	: userInfo,
+			method  : 'POST',
+			success : resolve,
+			error	: reject
+		});
+	},
 };
 
 module.exports = _user;

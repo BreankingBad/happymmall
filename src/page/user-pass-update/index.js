@@ -2,7 +2,7 @@
 * @Author: mxm
 * @Date:   2017-12-26 21:07:25
 * @Last Modified by:   mxm
-* @Last Modified time: 2017-12-28 20:57:50
+* @Last Modified time: 2017-12-28 21:45:02
 */
 'use strict';
 require('./index.css');
@@ -11,7 +11,7 @@ require('pageDir/common/header/index.js');
 var navSide = require('pageDir/common/nav-side/index.js');
 var utils = require('utilDir/utils.js');
 var _user = require('serviceDir/user-service.js');
-var templateIndex = require('./index.string');
+
 
 var page = {
 	init : function() {
@@ -30,16 +30,17 @@ var page = {
 		// 所以用$(document).on
 		$(document).on('click','.btn-submit',function() {
 			var userInfo = {
-				phone : $.trim($("#phone").val()),
-				question : $.trim($("#question").val()),
-				answer : $.trim($("#answer").val()),
-				email : $.trim($("#email").val()),
+				password : $.trim($("#password").val()),
+				passwordNew : $.trim($("#password-new").val()),
+				passwordConfirm : $.trim($("#password-confirm").val()),
 			};
 			var validateResult = _this.validateForm(userInfo);
 			if(validateResult.status){
-				_user.updateUserInfo(userInfo,function(res,msg){
+				_user.updatePassword({
+					passwordOld : userInfo.password,
+					passwordNew : userInfo.passwordNew
+				},function(res,msg){
 					utils.successTips(msg);
-					window.location.href = './user-center.html';
 				},function(errMsg){
 					utils.errorTips(errMsg);
 				});
@@ -51,8 +52,7 @@ var page = {
 	loadUserInfo : function(){
 		var userHtml = '';
 		_user.getUserInfo(function(res){
-			userHtml = utils.renderHtml(templateIndex,res);
-			$('.panel-body').html(userHtml);
+
 		},function(errMsg) {
 			 console.log(errMsg);
 		})
@@ -64,20 +64,16 @@ var page = {
 		};
 		
 		
-		if(!utils.validate(formData.phone, 'phone')){
-			result.msg = '手机号输入有误';
+		if(!utils.validate(formData.password, 'require')){
+			result.msg = '原密码不能为空';
 			return result;
 		}
-		if(!utils.validate(formData.email, 'email')){
-			result.msg = '邮箱格式有误';
+		if(!formData.passwordNew || formData.passwordNew.length < 6){
+			result.msg = '密码长度不得小于6位';
 			return result;
 		}
-		if(!utils.validate(formData.question, 'require')){
-			result.msg = '密码提示问题不能为空';
-			return result;
-		}
-		if(!utils.validate(formData.answer, 'require')){
-			result.msg = '密码提示答案不能为空';
+		if(formData.passwordNew  !== formData.passwordConfirm){
+			result.msg = '两次密码不一致';
 			return result;
 		}
 		result.status = true;

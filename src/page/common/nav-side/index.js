@@ -2,7 +2,7 @@
 * @Author: mxm
 * @Date:   2017-12-13 20:31:13
 * @Last Modified by:   mxm
-* @Last Modified time: 2017-12-13 21:52:23
+* @Last Modified time: 2017-12-28 20:57:34
 */
 require('./index.css');
 
@@ -16,7 +16,7 @@ var navSide = {
 		navList : [
 			{name : 'user-center', desc : '个人中心', href : './user-center.html'},
 			{name : 'order-list', desc : '我的订单', href : './order-list.html'},
-			{name : 'pass-update', desc : '密码修改', href : './pass-update.html'},
+			{name : 'user-pass-update', desc : '密码修改', href : './user-pass-update.html'},
 			{name : 'about', desc : '关于mmall', href : './about.html'}
 		]
 	},
