@@ -2,7 +2,7 @@
 * @Author: mxm
 * @Date:   2017-12-08 23:39:50
 * @Last Modified by:   mxm
-* @Last Modified time: 2018-01-06 10:23:44
+* @Last Modified time: 2018-01-06 11:35:21
 */
 
 .keywords-list{
@@ -29,4 +29,52 @@
 }
 .keywords-list .keywords-item:hover{
 	background: #999;
+}
+.banner-con{
+	width: 830px;
+	float: left;
+	height: 370px;
+	background: #eee;
+}
+.banner-con .loading{
+	margin-top: 150px;
+}
+
+.floor-wrap .floor-title{
+	height: 50px;
+	line-height: 50px;
+	color: #d58717;
+	font-weight: normal;
+	font-size: 20px;
+	border-bottom: 1px solid #d58717;
+}
+.floor-wrap .floor-list{
+	margin-right: -20px;
+
+	/*overflow为hidden是为了清除浮动*/
+	overflow: hidden;
+}
+.floor-wrap .floor-item{
+	position: relative;
+	width: 200px;
+	height: 220px;
+	margin: 15px 20px 15px 0;
+	float: left;
+	cursor: pointer;
+	background: #fff;
+}
+.floor-wrap .floor-list .floor-item .floor-text{
+	position: absolute;
+	top: 12px;
+	left: 20px;
+	font-size: 16px;
+	color: #555;
+}
+.floor-wrap .floor-list .floor-item .floor-img{
+	position: absolute;
+	width: 80%;
+	height: 75%;
+	border: none;
+	bottom: 10px;
+	right: 15px;
 }
