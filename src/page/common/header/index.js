@@ -2,7 +2,7 @@
 * @Author: mxm
 * @Date:   2017-12-11 23:33:19
 * @Last Modified by:   mxm
-* @Last Modified time: 2017-12-12 21:33:58
+* @Last Modified time: 2018-01-06 19:31:59
 */
 require('./index.css');
 
@@ -13,6 +13,7 @@ var header = {
 	init : function(){
 		console.log('init');
 		this.bindEvent();
+		this.onLoad();
 	},
 	onLoad : function() {
 		var keyword = utils.getUrlParam('keyword');
