@@ -2,7 +2,7 @@
 * @Author: mxm
 * @Date:   2017-12-08 23:39:50
 * @Last Modified by:   mxm
-* @Last Modified time: 2018-01-06 16:36:32
+* @Last Modified time: 2018-01-06 17:40:39
 */
 
 .keywords-list{
@@ -39,7 +39,33 @@
 .banner-con .loading{
 	margin-top: 150px;
 }
-
+.banner-con .banner-img{
+	width: 100%;
+	height: 370px;
+}
+.banner-con .banner-arrow{
+	position: absolute;
+	top: 160px;
+	width: 30px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 30px;
+	background: #ccc;
+	background: rgba(0,0,0,.2);
+	cursor: pointer;
+	color: #fff;
+}
+.banner-con .banner-arrow:hover{
+	background: #aaa;
+	background: rgba(0,0,0,.5);
+}
+.banner-con .banner-arrow.prev{
+	left: 0;
+}
+.banner-con .banner-arrow.next{
+	right: 0;
+}
 .floor-wrap .floor-title{
 	height: 50px;
 	line-height: 50px;
