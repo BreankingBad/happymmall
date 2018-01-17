@@ -2,7 +2,7 @@
 * @Author: mxm
 * @Date:   2018-01-06 19:23:20
 * @Last Modified by:   mxm
-* @Last Modified time: 2018-01-06 21:49:39
+* @Last Modified time: 2018-01-17 20:46:49
 */
 .sort-con{
 	overflow: auto;
@@ -76,6 +76,18 @@
 	color: #666;
 	text-decoration: none;
 }
+/*错误信息*/
+.err-tip {
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    color: #f60;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    background: #eee;
+} 
+
 
 
 

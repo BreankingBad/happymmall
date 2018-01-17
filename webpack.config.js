@@ -2,7 +2,7 @@
 * @Author: mxm
 * @Date:   2017-12-06 21:18:51
 * @Last Modified by:   mxm
-* @Last Modified time: 2018-01-06 19:21:47
+* @Last Modified time: 2018-01-13 11:41:04
 */
 
  var webpack 			= require('webpack');
@@ -31,7 +31,8 @@ var getHtmlConfig 		= function(name,title){
      entry: {
      	'common' : ['./src/page/common/index.js'],
         'index' : ['./src/page/index/index.js'],
-     	'list' : ['./src/page/list/index.js'],
+        'list' : ['./src/page/list/index.js'],
+     	'detail' : ['./src/page/detail/index.js'],
         'user-login' : ['./src/page/user-login/index.js'],
         'user-register' : ['./src/page/user-register/index.js'],
         'user-center' : ['./src/page/user-center/index.js'],
@@ -77,6 +78,7 @@ var getHtmlConfig 		= function(name,title){
         // html模版的处理
         new HtmlWebpackPlugin(getHtmlConfig('index','首页')),
         new HtmlWebpackPlugin(getHtmlConfig('list','商品列表页')),
+        new HtmlWebpackPlugin(getHtmlConfig('detail','商品详情页')),
         new HtmlWebpackPlugin(getHtmlConfig('user-login','登录')),
         new HtmlWebpackPlugin(getHtmlConfig('user-register','注册')),
         new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset','找回密码')),
