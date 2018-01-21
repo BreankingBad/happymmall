@@ -2,7 +2,7 @@
 * @Author: mxm
 * @Date:   2017-12-10 23:08:45
 * @Last Modified by:   mxm
-* @Last Modified time: 2017-12-26 21:29:41
+* @Last Modified time: 2018-01-21 20:19:17
 */
 require('./index.css');
 
@@ -15,6 +15,8 @@ var nav = {
 		this.bindEvent();
 		this.loadUserInfo();
 		this.loadCartCount();
+
+		return this;
 	},
 	bindEvent : function() {
 		$('.js-login').click(function(){
@@ -43,9 +45,9 @@ var nav = {
     //加载购物车数量
     loadCartCount : function () {
         _cart.getCartCount(function (res) {
-            $('.nav .cart-cont').text(res || 0);
+            $('.nav .cart-count').text(res || 0);
         },function (errMsg) {
-            $('.nav .cart-cont').text(0);
+            $('.nav .cart-count').text(0);
         })
     } 
 

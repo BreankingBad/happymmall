@@ -2,7 +2,7 @@
 * @Author: mxm
 * @Date:   2018-01-13 11:41:32
 * @Last Modified by:   mxm
-* @Last Modified time: 2018-01-17 21:31:18
+* @Last Modified time: 2018-01-21 20:00:44
 */
 'use strict';
 require('./index.css');
@@ -12,6 +12,7 @@ require('pageDir/common/header/index.js');
 var utils = require('utilDir/utils.js');
 var _product = require('serviceDir/product-service.js');
 var templateIndex = require('./index.string');
+var _cart = require('serviceDir/cart-service.js');
 
 var page = {
 	data : {
@@ -48,7 +49,19 @@ var page = {
 			}else if(type === 'minus') {
 				$pCount.val(currCount > minCount ? currCount - 1 : minCount);
 			}
-		})
+		});
+
+
+		$(document).on('click','.cart-add',function(){
+			_cart.addToCart({
+				productId : _this.data.productId,
+				count     : $('.p-count').val()
+			},function(res){
+				window.location.href = './result.html?type=cart-add';
+			},function(errMsg){
+				utils.errorTips(errMsg);
+			});
+		});
 
 	},
 	loadDetail : function() {
