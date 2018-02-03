@@ -2,7 +2,7 @@
 * @Author: mxm
 * @Date:   2018-01-20 23:29:47
 * @Last Modified by:   mxm
-* @Last Modified time: 2018-01-21 20:21:50
+* @Last Modified time: 2018-02-03 12:59:02
 */
 'use strict';
 require('./index.css');
@@ -130,7 +130,7 @@ var page = {
 		$(document).on('click','.btn-submit',function(){
 			// 总价大于0，进行提交
 			if(_this.data.cartInfo && _this.data.cartInfo.cartTotalPrice > 0) {
-				window.location.href = './confirm.html';
+				window.location.href = './order-confirm.html';
 			}else{
 				utils.errorTips('请选择商品后提交');
 			}
