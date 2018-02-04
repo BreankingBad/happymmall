@@ -2,7 +2,7 @@
 * @Author: mxm
 * @Date:   2017-12-06 21:18:51
 * @Last Modified by:   mxm
-* @Last Modified time: 2018-02-04 21:32:19
+* @Last Modified time: 2018-02-04 22:00:04
 */
 
  var webpack 			= require('webpack');
@@ -17,6 +17,7 @@ var getHtmlConfig 		= function(name,title){
 	return {
         	template : './src/view/'+ name + '.html',
         	filename : 'view/'+ name + '.html',
+            favicon : './favicon.ico',
         	title : title,
         	inject   : true,
         	hash 	 : true,
