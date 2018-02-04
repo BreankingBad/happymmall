@@ -2,7 +2,7 @@
 * @Author: mxm
 * @Date:   2017-12-06 21:18:51
 * @Last Modified by:   mxm
-* @Last Modified time: 2018-02-04 22:28:26
+* @Last Modified time: 2018-02-04 23:01:59
 */
 
  var webpack 			= require('webpack');
@@ -51,7 +51,8 @@ var getHtmlConfig 		= function(name,title){
      output: {
          path: path.resolve(__dirname, 'dist'),
          filename: 'js/[name].js',
-         publicPath: '/dist'
+         // publicPath为项目中的所有资源指定一个基础路径。这里对开发环境和生产环境作区分
+         publicPath: WEBPACK_ENV === 'dev' ? '/dist/' : '//s.happymmall.com/mall-fe/dist/'
      },
      externals: {
      	'jquery' : 'window.jQuery'
