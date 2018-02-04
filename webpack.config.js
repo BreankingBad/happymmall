@@ -2,7 +2,7 @@
 * @Author: mxm
 * @Date:   2017-12-06 21:18:51
 * @Last Modified by:   mxm
-* @Last Modified time: 2018-02-04 22:24:02
+* @Last Modified time: 2018-02-04 22:28:26
 */
 
  var webpack 			= require('webpack');
@@ -45,7 +45,8 @@ var getHtmlConfig 		= function(name,title){
         'user-center-update' : ['./src/page/user-center-update/index.js'],
         'user-pass-update' : ['./src/page/user-pass-update/index.js'],
      	'user-pass-reset' : ['./src/page/user-pass-reset/index.js'],
-     	'result' : ['./src/page/result/index.js']
+        'result' : ['./src/page/result/index.js'],
+     	'about' : ['./src/page/about/index.js']
  	 },
      output: {
          path: path.resolve(__dirname, 'dist'),
@@ -104,6 +105,7 @@ var getHtmlConfig 		= function(name,title){
         new HtmlWebpackPlugin(getHtmlConfig('user-center','查看个人信息')),
         new HtmlWebpackPlugin(getHtmlConfig('user-pass-update','修改用户密码')),
         new HtmlWebpackPlugin(getHtmlConfig('result','操作结果页')),
+        new HtmlWebpackPlugin(getHtmlConfig('about','关于我们'))
     ]
  };
 
