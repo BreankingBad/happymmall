@@ -2,7 +2,7 @@
 * @Author: mxm
 * @Date:   2017-12-06 21:18:51
 * @Last Modified by:   mxm
-* @Last Modified time: 2018-02-04 13:54:24
+* @Last Modified time: 2018-02-04 21:32:19
 */
 
  var webpack 			= require('webpack');
@@ -36,6 +36,7 @@ var getHtmlConfig 		= function(name,title){
         'order-confirm' : ['./src/page/order-confirm/index.js'],
         'order-list' : ['./src/page/order-list/index.js'],
         'order-detail' : ['./src/page/order-detail/index.js'],
+        'payment' : ['./src/page/payment/index.js'],
      	'cart' : ['./src/page/cart/index.js'],
         'user-login' : ['./src/page/user-login/index.js'],
         'user-register' : ['./src/page/user-register/index.js'],
@@ -87,6 +88,7 @@ var getHtmlConfig 		= function(name,title){
         new HtmlWebpackPlugin(getHtmlConfig('order-confirm','订单确认页')),
         new HtmlWebpackPlugin(getHtmlConfig('order-list','订单列表页')),
         new HtmlWebpackPlugin(getHtmlConfig('order-detail','订单详情页')),
+        new HtmlWebpackPlugin(getHtmlConfig('payment','订单支付页')),
         new HtmlWebpackPlugin(getHtmlConfig('user-login','登录')),
         new HtmlWebpackPlugin(getHtmlConfig('user-register','注册')),
         new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset','找回密码')),
