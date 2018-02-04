@@ -2,7 +2,7 @@
 * @Author: mxm
 * @Date:   2017-12-06 21:18:51
 * @Last Modified by:   mxm
-* @Last Modified time: 2018-02-04 22:00:04
+* @Last Modified time: 2018-02-04 22:24:02
 */
 
  var webpack 			= require('webpack');
@@ -59,7 +59,14 @@ var getHtmlConfig 		= function(name,title){
 		loaders: [
 				{test: /\.css$/,loader: 'style-loader!css-loader'},
 				{test:/\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/,loader:'url-loader?limit=1000&name=resource/[name].[ext]'},
-				{test: /\.string$/,loader: 'html-loader'},
+				{
+                    test: /\.string$/,
+                    loader: 'html-loader',
+                    query : {
+                        minimize : true,
+                        removeAttributeQuotes : false
+                    }
+                },
 		     ]
      },
      resolve : {
